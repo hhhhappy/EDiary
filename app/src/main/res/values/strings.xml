@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">EDiary</string>
+    <string name="welcome_text">Welcome to EDiary\'s world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="login_hint_text">Enter your password</string>
+    <string name="login_button_login">Login</string>
+</resources>

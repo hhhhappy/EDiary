@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<drawable name="delete_focused">#e10808</drawable>  
+    <drawable name="delete_normal">#f62d05</drawable>
+    
+    <drawable name="edit_focused">#e10808</drawable>  
+    <drawable name="edit_normal">#f62d05</drawable>
+</resources>

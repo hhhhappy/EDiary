@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" 
+    android:layout_height="fill_parent"
+    android:scrollbars="vertical">
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <TextView
+		android:id="@+id/create_title_text"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+			       
+		android:textSize="30sp"
+		android:textColor="#000000"
+		android:text="Start a diary:" /> 
+	<TextView
+		android:id="@+id/create_weather_text"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+			        
+		android:textSize="20sp"
+		android:textColor="#000000"
+		android:text=" How about the weather today?" />
+             
+        <RadioGroup 
+			android:id="@+id/create_weather_radio" 
+			android:contentDescription="Weather" 
+			android:layout_width="match_parent" 
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioSunshine"
+            android:layout_width="33dp"
+        	android:layout_height="33dp"
+        	android:layout_marginLeft="15dip"
+        	android:background="@drawable/sunshinebutton"
+        	android:button="@null"
+            android:tag="sunshine"
+            android:checked="true" >
+
+		</RadioButton>
+		<RadioButton 
+			android:layout_width="33dp"
+        	android:layout_height="33dp"
+        	android:layout_marginLeft="30dip"
+        	android:background="@drawable/cloudybutton"
+        	android:button="@null"
+			android:tag="cloudy"
+			android:id="@+id/radioCloudy">
+		</RadioButton>
+		<RadioButton
+			android:layout_width="33dp"
+        	android:layout_height="33dp"
+        	android:layout_marginLeft="30dip"
+        	android:background="@drawable/rainbutton"
+        	android:button="@null"
+			android:tag="rain"
+			android:id="@+id/radioRain">
+		</RadioButton> 
+
+		<RadioButton
+		    android:id="@+id/radioSnow"
+		    android:layout_width="33dp"
+        	android:layout_height="33dp"
+        	android:layout_marginLeft="30dip"
+        	android:background="@drawable/snowbutton"
+        	android:button="@null"
+		    android:tag="snow"
+		    >
+
+		</RadioButton>
+		</RadioGroup>
+	
+	    
+	
+	<TextView
+		android:id="@+id/create_emotion_text"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+			        
+		android:textSize="20sp"
+		android:textColor="#000000"
+		android:text=" How are you feeling?" />
+	        
+	        
+             
+       	<RadioGroup 
+		android:id="@+id/create_emotion_radio" 
+		android:contentDescription="emotion" 
+		android:layout_width="match_parent" 
+		android:layout_height="wrap_content"
+		android:orientation="horizontal">
+        	        
+        	   <RadioButton
+        	       android:id="@+id/radioHappy"
+        	       android:layout_width="30dp"
+        	       android:layout_height="30dp"
+        	       android:layout_marginLeft="15dip"
+        	       android:background="@drawable/happybutton"
+        	       android:button="@null"
+        	       android:tag="happy"
+        	       android:checked="true"/>
+
+		    	<RadioButton 
+			    	android:layout_width="30dp"
+        	       	android:layout_height="30dp"
+        	       	android:background="@drawable/smilebutton"
+        	       	android:button="@null"
+			        android:tag="smile"
+			        android:layout_marginLeft="30dip"
+			        android:id="@+id/radioSmile"/>
+		    	
+		    	<RadioButton
+		    	    android:id="@+id/radioNormal"
+		    	    android:layout_width="30dp"
+        	       	android:layout_height="30dp"
+        	       	android:layout_marginLeft="30dip"
+        	       	android:background="@drawable/normalbutton"
+        	       	android:button="@null"
+			        android:tag="normal"
+			        />
+			     
+
+			    <RadioButton
+			        android:id="@+id/radioSad"
+			        android:layout_width="30dp"
+        	       	android:layout_height="30dp"
+        	       	android:layout_marginLeft="30dip"
+        	       	android:background="@drawable/sadbutton"
+        	       	android:button="@null"
+			        android:tag="sad"/>
+			    </RadioGroup>
+    
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal">
+	    <TextView
+		android:id="@+id/create_date_text"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+			       
+		android:textSize="20sp"
+		android:textColor="#000000"
+		android:text="Date:" />
+	   	<EditText 
+	    android:id="@+id/create_date"
+	    android:layout_width="0dp"
+	    android:layout_height="wrap_content"
+	    android:layout_weight="1"
+	    android:inputType="date"
+	    android:hint="format: yyyy-mm-dd"
+	    />
+	</LinearLayout>
+	
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal">
+	    <TextView
+		android:id="@+id/create_place_text"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+			       
+		android:textSize="20sp"
+		android:textColor="#000000"
+		android:text="Location: " />
+	   	<EditText 
+	    android:id="@+id/create_place"
+	    android:layout_width="0dp"
+	    android:layout_height="wrap_content"
+	    android:hint="where are you?"
+	    android:layout_weight="4"
+	    />
+	   	<Button 
+		    android:id="@+id/create_button_getlocation"
+		    android:layout_height="25dp"
+		    android:layout_width="25dp"
+		    
+		    android:focusable= "false"
+		    android:background="@drawable/getlocationbutton"
+		    android:layout_marginRight="10dip"
+		    />
+	</LinearLayout>
+	
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal">
+	    <TextView
+		android:id="@+id/create_photo_text"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+			       
+		android:textSize="20sp"
+		android:textColor="#000000"
+		android:text="Photos: " />
+	    <ImageView 
+	        android:id="@+id/photo_add_1"
+	        android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:scaleType="fitXY"
+			android:adjustViewBounds="true"
+		    android:layout_marginLeft="10dp"
+		    android:visibility="gone"
+	        />
+	   	<ImageView 
+	        android:id="@+id/photo_add_2"
+	        android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:scaleType="fitXY"
+			android:adjustViewBounds="true"
+		    android:layout_marginLeft="10dp"
+		    android:visibility="gone"
+	        />
+	   	<ImageView 
+	        android:id="@+id/photo_add_3"
+	        android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:scaleType="fitXY"
+			android:adjustViewBounds="true"
+		    android:layout_marginLeft="10dp"
+		    android:visibility="gone"
+	        />
+	   	<ImageButton
+	    android:id="@+id/create_button_photo"
+
+	    android:layout_width="25dp"
+	    android:layout_height="25dp"
+	    android:layout_marginLeft="10dp"
+	    android:background="@drawable/add_photo2"
+	    />
+	</LinearLayout>
+	<TextView
+		android:id="@+id/create_context_text"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+			       
+		android:textSize="20sp"
+		android:textColor="#000000"
+		android:text="Context:" />
+	<EditText 
+	    android:id="@+id/create_context_edit"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:maxLines="4"
+	    android:hint="write down your story here..."
+	    />
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal">
+	    <Button
+    	    android:id="@+id/create_button_cancel"
+    	    android:layout_width="0dp"
+    	    android:layout_height="wrap_content"
+    	    android:layout_weight="1"
+    	    android:text="Cancel"
+    	    />
+	    <Button
+    	    android:id="@+id/create_button_save"
+    	    android:layout_width="0dp"
+    	    android:layout_height="wrap_content"
+    	    android:layout_weight="1"
+    	    android:text="Create"
+    	    />
+	</LinearLayout>
+</LinearLayout>
+</ScrollView>
